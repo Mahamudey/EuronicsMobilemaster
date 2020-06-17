@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Euronics Orders</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style2.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+
+</head>
+	<body>
+
+		<!-- #################################################################Modal order submit################################################################# -->
+
+<!-- trigger order-modal button -->
+
+<!-- trigger order-modal button -->
+<div class="modal fade" id="order-submit-modal" tabindex="-1" role="dialog" aria-labelledby="submitOrderModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="submitOrderModal-titel">Submit Order</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <form method="POST" action="#">
+       	<input type="hidden" name="uid" value="Mah">
+			  <div class="form-group justify">
+			    <textarea type="text" name="mordert" class="form-control rounded-1" id="submitOrderModal-input" rows="3" required minlength="10" required></textarea>
+			  </div>
+
+			    <select class="custom-select" name="shop" required>
+				  <option value="" disabled selected>Select your shop</option>
+				  <option value="akersberga">Aåkersberga</option>
+				  <option value="sklm">SKLM</option>
+				  <option value="kista">Kista</option>
+				</select>
+			    
+			  <button type="submit" class="btn btn-outline-primary" id="submitOrder-btn" name="morderSubmit">Order</button>
+			</form>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close Modal</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- #################################################################Modal order submit################################################################# -->
+
+
+<!-- #################################################################Modal order Reject################################################################# -->
+<!-- trigger reject-modal button -->
+
+<!-- trigger reject-modal button -->
+<div class="modal fade" id="order-reject-modal" tabindex="-1" role="dialog" aria-labelledby="RejectOrder" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="RejectOrder-titel">Reject Order</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <form method="POST" action="#">
+			  <div class="form-group justify">
+			  	<textarea type="text" name="rejectordercmnt" class="form-control rounded-1" id="rejectordercmnt-input" rows="2" required minlength="10" required></textarea>
+			  </div>
+			  <div class="form-group justify">
+			    <textarea type="text" name="rejectorder" class="form-control rounded-1" id="RejectOrder-input" rows="3" disabled></textarea>
+			  </div>
+
+			    
+			    <select class="custom-select" name="shop" disabled>
+				  <option value="" disabled selected>Select your shop</option>
+				  <option value="akersberga">Aåkersberga</option>
+				  <option value="sklm">SKLM</option>
+				  <option value="kista">Kista</option>
+				</select>
+			    
+			  <button type="submit" class="btn btn-outline-danger" id="RejectOrder-btn" name="RejectOrderSubmit">Reject</button>
+			</form>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- #################################################################Modal order Reject################################################################# -->
+
+	 <header>
+	 	<nav class="navbar navbar-expand-xl navbar-light bg-light">
+  		      <!-- Navbar content -->
+  		    <a href="#" class="navbar-brand">Euronics Orders</a>
+	  		 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+	    	   <span class="navbar-toggler-icon"></span>
+  			 </button>
+  			 
+  			<div class="collapse navbar-collapse" id="navbarContent">
+  			  <ul class="navbar-nav mr-auto">
+  			  <li class="nav-item active">
+       			 <a class="nav-link" href="index.php">Home<span class="sr-only">(current)</span></a>
+      		  </li>
+      		  </ul>
+
+      		  
+      		  <form class="form-inline my-2 my-lg-0" method="POST" action="#">
+      		  	<input type="text" name="muname" class="form-control mr-2 mb-1" id="Muname" placeholder="Username/Email" required>
+      		  	<input type="password" name="pwd" class="form-control mr-2 mb-1" id="pswd" placeholder="Password" required>
+      		  </form>
+      		    <button type="submit" class="btn btn-info mr-2 mb-1" id="loginbtn" name="loginSubmit">Login</button>
+      		    <a href="signup.html" class="btn btn-outline-success mr-2 mb-1" id="signupbtn">Sign up</a>
+
+      		  <form class="form-inline my-2 my-lg-0" method="POST" action="#">
+			    <button type="submit" class="btn btn-outline-info mb-1" id="logoutbtn" name="logoutSubmit">Log Out</button>
+			  </form>
+			  <!-- check box if needed in future
+			    <div class="form-check">
+			    <input name="salesagent" type="checkbox" class="form-check-input" id="salesa" value="salesA">
+			    <label class="form-check-label" for="akersberga">Åkersberga</label>
+			    </div> -->
+  			</div>  		     
+		</nav>
+	</header>
+	<main>
+    	<div id="maincontainer1" class="container p-5 mt-5">
+    		<button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#order-submit-modal" id="order-submit-mbtn">make order</button>
+    	    <form action="#" method="POST">
+
+    	    
+    	    </form>
+    	    
+    	</div>
+
+    	<div class="container p-5 mt-5" id="maincontainer2">
+    		<div class="container p-2 mt-5 bg-light" id="shop-selector-container">
+    		<form action="#" method="POST">
+    		<button class="btn btn-info mr-2 ml-2 mt-2 mb-2" id="shop-akersberga" name="shopakersbgera" type="submit">Åkersberga</button>
+    	    <button class="btn btn-info mr-2 ml-2 mt-2 mb-2" id="shop-sklm" name="shopsklm" type="submit">SKLM</button>
+    		<button class="btn btn-info mr-2 ml-2 mt-2 mb-2" id="shop-lil" name="shoplil" type="submit">Liljeholmen</button>
+    		<button class="btn btn-info mr-2 ml-2 mt-2 mb-2" id="shop-lil2" name="shoplil2" type="submit">Liljeholmen kiosk</button>
+    		<button class="btn btn-info mr-2 ml-2 mt-2 mb-2" id="shop-tumba" name="shoptumba" type="submit">Tumba</button>
+    		<button class="btn btn-info mr-2 ml-2 mt-2 mb-2" id="shop-hornstul" name="shophornstul" type="submit">Hornstul</button>
+    		<button class="btn btn-info mr-2 ml-2 mt-2 mb-2" id="shop-kista" name="shopkista" type="submit">Kista</button>
+    		<button class="btn btn-info mr-2 ml-2 mt-2 mb-2" id="shop-kista2" name="shopakersbgera" type="submit">Kista kiosk</button>
+    		<button class="btn btn-info mr-2 ml-2 mt-2 mb-2" id="shop-jakobsberg" name="shopajakob" type="submit">Jakobsberg</button>
+    		</form>
+    	</div>
+
+    	<div class="container p-5 mt-5">
+    	    <div class="card w-75">
+			  <div class="card-body">
+			    <h5 class="card-title">Card title</h5>
+			    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			    <button class="btn btn-outline-warning" id="doneorder-btn" name="doneorderbtn" type="submit">Done</button>
+			    <button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#order-reject-modal">Reject order</button>
+			  </div>
+			</div>
+		</div>
+
+    	</div>
+    </main>
+
+    <footer>
+	
+</footer>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

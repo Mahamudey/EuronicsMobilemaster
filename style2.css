@@ -1,0 +1,77 @@
+body {
+	background-color: #282828;
+	font-family: 'Roboto', sans-serif;
+}
+
+#signup-formContainer {
+	font-family: 'Roboto', sans-serif;
+	background-color:#f8f9fa;
+	border-radius: 5px;
+	width: 95%;
+	text-align: center;
+
+
+}
+
+#signuplnk {
+
+}
+
+
+#loginbtn {
+	font-family: 'Roboto', sans-serif;
+	
+	
+}
+
+
+#logoutbtn {
+	font-family: 'Roboto', sans-serif;
+	
+}
+
+
+#signupbtn {
+	font-family: 'Roboto', sans-serif;
+	
+
+}
+
+
+#maincontainer1 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	background-color:#f8f9fa;
+	border-radius: 5px;
+	width: 95%;
+	
+
+}
+
+
+#shop-selector-container {
+
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	background-color:#f8f9fa;
+	border-radius: 5px;
+	width: 100%;
+	text-align: center;
+}
+
+#rejectordercmnt-input{
+	resize: none;
+}
+
+#RejectOrder-input{
+	resize: none;
+}
+
+#submitOrderModal-input {
+	resize: none;
+}
+
+#order-submit-mbtn {
+
+	width: 100%;
+}
